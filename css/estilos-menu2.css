@@ -1,0 +1,415 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu-des:hover{
+	cursor: url("../images/cursor-gris.png") 3 3,auto;
+}
+
+/* INICIO */ 
+
+.flexmenu{
+    position: fixed;
+    z-index: 1;
+   	top: 4%;
+   	left: 3%;
+   	height: auto;
+   	width: auto;
+}
+
+#openmenu{
+	height: 30px;
+	width: 100px;
+	cursor: url("../images/cursor-gris.png") 3 3,auto;
+} 
+
+.menuh{
+	width: 40px;
+    height: 4px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #fff;
+	position: absolute;
+}
+
+#bar1 {
+ 	top: 5px;
+	left: 0;
+ }
+
+ #bar2 {
+   top: 20px;
+	left: 0px;
+ }
+
+.menu-palabra {
+	color: white;
+	font-size: 14px;
+    font-weight: 300;
+	height: auto;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 55px;
+	top: 4px;
+}
+
+.menu-palabra:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+	background-color: white;
+}
+
+#openmenu:hover .menu-palabra:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#openmenu:active .menuh{
+	width: 35px;
+	transition: 0.1s;
+	transition-delay: 0s;
+}
+
+/*#openmenu:active #bar1 {
+ 	transform: translate(2px, 0px);
+	transition: 0.2s ease;
+ }
+
+#openmenu:active #bar2 {
+   transform: translate(-2px, 0px);
+	transition: 0.2s ease;
+ }
+*/
+
+
+/*--------------- MENU DESPLEGABLE*/
+
+.menu-des {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	z-index: 100;
+	/*transition: 0.6s;*/
+	transition: .4s cubic-bezier(.27,.06,.77,.89);
+	transition-delay: 0.2s;
+}
+
+.menu-des a:hover{
+	text-decoration: none;
+	color: #707070;
+	opacity: 1;
+}
+
+#closemenu{
+	position: absolute;
+	top: 4%;
+	left: 3%;
+	width: 40px;
+	height: 30px;
+	padding: 0px;
+	margin: 0%;
+}
+
+.bar1-close {
+    width: 35px;
+    height: 4px;
+    background-color: #707070;
+	transform: rotate(-45deg) translate(-8px, 10px);
+	visibility: visible;
+  }
+
+.bar2-close { 
+    width: 35px;
+    height: 4px;
+    background-color: #707070;
+	transform: rotate(45deg) translate(7px, 5px);
+	visibility: visible;
+  }
+
+#closemenu:hover{
+	opacity: 1;
+}
+
+.redes-des{
+	position: absolute;
+	width: 100%;
+	top: 87%;
+	padding: 0 42%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.redes-des .redess{
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.menu-des .redes-des  i{
+	position: relative;
+	font-size: 21px;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	color: #707070;
+	opacity: 1;
+}
+
+.menu-des .redes-des i:hover{
+	color: #707070;
+	opacity: 0.7;
+}
+	
+@media screen and (max-height: 450px) {
+  .menu-des a {font-size: 20px}
+  .menu-des .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+/*--------------------------- primeros enlaces */
+
+.enlaces-menu{
+	height: 100%;
+	padding: 18vh 0 30vh 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.enlacemenu{
+	height: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+.enlacemenu a{
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+  	text-decoration: none;
+	font-weight: 600;
+  	font-size: 29px;
+  	color: #707070;
+	opacity: 0.7;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 2vh 0;
+}
+
+
+.enlaces-menu a:hover, .overlay a:focus {
+    opacity: 1;
+	cursor: url("../images/cursor-gris.png"), auto;	
+}
+
+
+.sidebar .container-enlacesproductos a{
+	font-size: 18px;
+	color: #707070;
+	opacity: 0.7;
+}
+
+.inicio a:hover{
+	cursor: url("../images/cursor-gris-claro.png") 3 3,auto;
+}
+.productos a:hover{
+	cursor: url("../images/cursor-azul.png") 3 3,auto;
+}
+.proyectos a:hover{
+	cursor: url("../images/cursor-verde.png") 3 3,auto;
+}
+.nosotros a:hover{
+	cursor: url("../images/cursor-rojo.png") 3 3,auto;
+}
+.contacto a:hover{
+	cursor: url("../images/cursor-amarillo.png") 3 3,auto;
+}
+
+
+/*---- RESPONSIVE!!!!!!*/
+
+
+@media (hover: none) and (pointer: coarse) {
+    
+/*	.bar1-close {
+		visibility: visible;
+		-webkit-visibility: visible;
+		-moz-visibility: visible;
+		
+  }
+
+	.bar2-close { 
+		visibility: visible;
+		-webkit-visibility: visible;
+		-moz-visibility: visible;
+	}*/
+	.breadcrumb{
+		display: none !important;
+}
+
+}
+
+
+/*cosas para esconder en comun*/
+@media screen and (min-width: 1023px){
+	
+	#menu-mobile{
+	visibility: hidden;
+	-webkit-visibility: hidden;
+	-moz-visibility: hidden;
+	}
+	
+	.dropdown{
+	visibility: hidden;
+	-webkit-visibility: hidden;
+	-moz-visibility: hidden;
+	position: absolute;
+	top: 0;
+	}
+}
+
+
+/*----- MEDIA QUERIES PARA COMPUS CHICAS*/
+
+@media only screen 
+	and (min-width: 1024px) and (max-width: 1919px){
+
+	.enlacemenu a {
+		font-size: 21px;
+	}
+
+	.links-pryect a {
+		font-size: 15px ;
+		margin-bottom: 28px;
+	}
+		
+	.container-enlacesproductos{
+		padding: 12vh 0 15vh 0;
+		height: 100%;
+	}
+
+	.redes-des{
+		padding: 0 35%;
+	}
+
+}
+
+/*para celulares y mas chico*/	
+@media screen and (max-width: 1023px) {
+	
+	/* HAMBURGUESA */
+	.flexmenu{
+		   left: 9%;
+	}
+	
+
+
+	/*SECCION MENU INICIAL - HAMBURGUESA*/
+	.enlacesincio{
+		visibility: hidden;
+		-webkit-visibility: hidden;
+		-moz-visibility: hidden;
+    }
+
+    .enlacemenu{
+		visibility: hidden;
+		-webkit-visibility: hidden;
+		-moz-visibility: hidden;
+		position: absolute;
+    }
+    
+    
+/*SECCION MENU DESPLEGABLE*/
+        
+    .menu-des {
+        width: 100vw;
+        left: -100% ;
+        }
+        
+    .redes-des{
+        position: absolute;
+		top: 90%;
+		padding: 0 25%;
+    }
+
+    
+	/*MENU MOBILE*/
+
+	#menu-mobile {
+	top: 15vh;
+	padding: 0;
+	/* display: block; */
+	}
+	
+	#menu-mobile .enlaces-mobile a{
+    font-weight: 600;
+    font-size: 2.6vh;
+    color: #707070;
+    opacity: 0.7;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+   	z-index: 1000;
+    }
+        
+    .enlaces-mobile{
+	position: absolute;
+	top: 15vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 35%;
+	margin-top: 5%;
+	width: auto;
+	height: 60vh;
+    }
+        
+    ul.enlaces-mobile {
+    padding: 0 0 0 0px;
+    }
+    
+    .enlaces-mobile li{
+    height: 15%;
+    margin: 0 0 8px 0;
+   }
+    
+	#closemenu {
+	position: absolute;
+	top: 4.5vh;
+	left: 9%;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+    }
+
+	
+/* fin menu mobile*/
+}	
+
+
+

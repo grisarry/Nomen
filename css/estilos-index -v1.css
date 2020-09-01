@@ -1,0 +1,1724 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size:14px;
+    font-weight: 200;
+    
+    list-style: none;
+    text-decoration: none;
+    
+}
+
+/*-------INICIO------*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*----- PUNTITOS*/
+
+#fp-nav{
+	position: fixed;
+	top: 87%;
+	left: 96%;
+	z-index: 250;
+}
+
+#fp-nav ul li a span{
+	background-color: #707070;
+	opacity: 0.7;
+}
+
+#fp-nav ul li .fp-tooltip {
+	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+
+#fp-nav .fp-tooltip.fp-right{
+	font-size: 11px;
+	line-height: 12px;
+	color: #707070;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	align-content: center;
+	justify-content: center;
+}
+
+#fp-nav ul li a.active span{
+	height: 10px;
+	width: 10px;
+	align-content: center;
+}
+
+
+body.fp-viewing-1 #fp-nav ul li a span{
+	background-color: #fff;
+	opacity: 1;
+
+}
+
+body.fp-viewing-1 #fp-nav .fp-tooltip.fp-right{
+	color: #fff;
+}
+
+.menu-palabra {
+	color: white;
+	font-size: 14px;
+    position: absolute;
+    left: 60px;
+    top: 4px;
+    font-weight: 300;
+}
+
+
+ /* MENÚ */
+ .inicio-fijo{
+	position: fixed;
+	height: 8vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(100px, 160px) minmax(0px, 380px) minmax(160px, 100%);
+	z-index: 100;
+}
+
+.flexmenu{
+    position: fixed;
+    z-index: 1;
+   
+   top: 0;
+   left: 0;
+   height: 100px;
+   width: 50%;
+  
+}
+
+#openmenu{
+    position: relative;
+    
+    top: 35px;
+	left: 80px;
+	width: 40px;
+	padding: 5px;
+	
+    cursor: pointer;
+} 
+
+.menuh{
+	width: 40px;
+    height: 4px;
+	background-color: #fff;
+}
+
+
+#bar1 {
+   margin-bottom: 13px;
+ }
+
+
+ #bar2 {
+   margin-top: 15px 0;
+ }
+
+
+.color-menu{
+	background-color: #707070;
+	
+}
+
+.color-menu-palabra {
+	color: #707070;
+}
+
+ .bar-scroll {
+     background-color: #15af62;
+ }
+
+/*  --------- animacion de barras menu */
+
+
+.menuh{
+
+	background-color: #fff;
+	transition: all 600ms;
+	
+}
+
+
+body.fp-viewing-2 .menuh,
+body.fp-viewing-3 .menuh,
+body.fp-viewing-4 .menuh,
+body.fp-viewing-5 .menuh,
+body.fp-viewing-6 .menuh,
+body.fp-viewing-7 .menuh{
+	background-color: #707070;
+	opacity: 0.7;
+	transition-delay: 00.6s;
+} 
+
+
+body.fp-viewing-2 .menu-palabra,
+body.fp-viewing-3 .menu-palabra,
+body.fp-viewing-4 .menu-palabra,
+body.fp-viewing-5 .menu-palabra,
+body.fp-viewing-6 .menu-palabra,
+body.fp-viewing-7 .menu-palabra{
+	color: #707070;
+	opacity: 0.7;
+	transition-delay: 00.6s;
+} 
+
+
+
+
+
+/*----- Centered texts in each section ------------- */
+
+.section{
+		text-align:left;
+		overflow: hidden;
+}
+
+#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+		/* PORQUE NO QUIERE EL FONDITO NEGRO */
+		background-color: #142444;
+		/* background-color: #fff; */
+ 		 /*background-color: black; */ /* in case the video doesn't fit the whole page*/
+  		background-position: center center;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+}
+
+
+/* Layer with position absolute in order to have it over the video
+	* ------------ */
+	
+#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 0%;
+		/* height: 100%; */
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+
+#section0{
+	overflow: hidden;
+	height: 100%;
+}
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+video::-webkit-media-controls {
+	  display:none !important;
+}
+
+
+/*-----------------SECCION 0 - OVER VIDEO*/
+
+
+.container-inicio {
+        overflow-x: hidden;
+		
+}
+
+.container-logo {
+    position: absolute;
+    top: 32px;
+	right: 5%;
+	z-index: 200;
+}
+
+.container-logo .logo-nomen {
+    z-index: 3;
+    cursor: pointer;
+    color: white;
+    height: 30px;
+}
+.container-logo .logo-nomen:hover {
+    cursor: pointer;
+}
+
+.container-video {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+} 
+
+.container-video video {
+    min-width: 100%; 
+ 	min-height: 100%;
+}
+
+.container-menu a.a-logo-nomen {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.container-menu a .logo-nomen {
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.container-menu ul {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.container-definiendo {
+    /* position: absolute; */
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 40% auto 10%;
+    grid-template-areas: "linea uno" "dos tres" "cuatro cuatro";
+}
+
+.container-definiendo .linea  {
+    grid-area: linea;
+    border-right: 2px white solid;
+}
+
+.container-definiendo .texto-definiendo p {
+	color: white;
+    font-size: 50px;
+    text-align: right;
+	line-height: 55px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0;
+    padding-right: 10px;
+    /* padding-top: 10px; */
+    border-right: 2px white solid; 
+    
+    margin: 0;
+    font-weight: 200;
+}	
+
+.container-definiendo .linea  {
+    grid-area: linea;
+    border-right: 2px white solid;
+}
+
+.container-definiendo .texto-definiendo p {
+    color: white;
+    font-size: 50px;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0;
+    padding-right: 10px;
+    border-right: 2px white solid; 
+    
+    margin: 0;
+    font-weight: 200;
+}
+
+.container-definiendo .texto-definiendo {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.container-definiendo .info-inicio {
+    grid-area: cuatro;
+    grid-row: 3 ;
+	margin: 0;
+	padding: 0 0 0 80px;
+	
+}
+
+.container-definiendo .info-inicio a {
+   
+    padding: 0  0 0 0px;
+    color: white;
+    font-size: 13px;
+    display: inline;
+	font-weight: 300;
+}
+
+.container-definiendo .info-inicio a.info-inicio-mail,
+.container-definiendo .info-inicio a.info-inicio-tel {
+    padding: 0 0 0 60px;
+}
+
+
+
+/*-----------------SECCIONES */
+
+
+.seccion-inicio {
+    position: relative;
+    background: #FAFAFA;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.somos {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    opacity: 0.025;
+    font-size: 150px; 
+    
+    font-weight: 800;
+}
+
+.titulo {
+    position: absolute;
+}
+
+.frase {
+    position: absolute;
+}
+
+.img-inicio {
+    position: absolute;
+}
+
+.boton-inicio {
+    position: absolute;
+}
+
+.img-inicio img {
+	/* width: 100vw; */
+	/* min-width: 100vw; */
+	max-height: 100vh;
+	vertical-align: middle;
+}
+
+
+/*-----------------SECCION 1 - DISEÑO */
+
+#diseño {
+	background-image: url(../images/inicio_diseno.png);
+	background-size: cover;
+	background-position: left center;
+	max-height: 100vh;
+}
+
+
+
+
+.diseño .titulo {
+    color: #435B89;
+    text-transform: uppercase;
+    font-size: 90px;
+    
+    font-weight: 700;
+
+    left: 33vw;
+    top: 37vh;
+}
+
+
+.diseño .frase {
+    color: #435B89;
+    font-size: 40px;
+    
+    font-weight: 300;
+    left: 21vw;
+    top: 43.5vh;
+}
+
+.diseño .somos {
+    left: 17vw;
+    top: 28vh;
+}
+
+.boton-productos {
+    background-color: #435B89 ; 
+    border: none;
+    color: #ededed;
+    text-transform: uppercase;
+    
+    font-weight: 600;
+    letter-spacing: 1px;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+  
+    cursor: pointer;
+    border-radius: 2px;
+    
+    z-index: 2;
+
+    padding: 8px 10px;
+   
+
+}
+
+#section1 .seccion-inicio .texto-inicio a:hover{
+	text-decoration: none;
+	color: #FAFAFA;
+	opacity: 0.85;
+	
+}
+
+
+
+/*------animacion de section1*/
+
+.img-inicio #img-diseño{
+	position: relative;
+	left: 16%;
+	transition: all 1200ms ease 0s;
+}
+
+body.fp-viewing-2 #section1 #img-diseño{
+	left: 0px;
+}
+
+.texto-inicio #somos-dis{
+	left: 2%;
+	transition: all 800ms ease;
+}
+
+body.fp-viewing-2 #section1 #somos-dis{
+	left: 9%;
+}
+
+.texto-inicio #titulo-dis{
+	left: 5%;
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-2 #section1 #titulo-dis{
+	left: 19%;
+}
+
+.texto-inicio #frase-dis{
+	left: 5%;
+	transition: all 1100ms ease;
+}
+
+body.fp-viewing-2 #section1 #frase-dis{
+	left: 22.6%;
+}
+
+.boton-productos {
+	left: -2%;
+    top: 73%;
+	transition: all 900ms ease;
+}
+
+body.fp-viewing-2 #section1 .boton-productos{
+	left: 12%;
+	
+}
+
+
+
+/*-----------------SECCION 2 - CALIDAD*/
+#calidad {
+	background-image: url(../images/inicio_calidad.png);
+	background-size: cover;
+	background-position: center;
+	max-height: 100vh;
+}
+
+
+.calidad .titulo {
+    color: #F1C04F;
+    text-transform: uppercase;
+    font-weight: 700;
+	font-size: 90px;
+}
+
+.calidad .frase {
+    color: #F1C04F;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+
+/*------animacion de section2*/
+
+
+#section2 #img-calidad{
+	position: relative;
+	left: -15%;
+	transition: all 1200ms ease 0s;
+}
+
+body.fp-viewing-3 #section2 #img-calidad{
+	left: 0%;
+}
+
+#section2 #somos-cal{
+	left:63%;
+	top: 44%;
+	/* font-size: 190px; */
+	transition: all 700ms ease;
+}
+
+body.fp-viewing-3 #section2 #somos-cal{
+	left: 53%;
+}
+
+#section2 #titulo-cal{
+    left: 64%;
+    top: 53%;
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-3 #section2 #titulo-cal{
+	left: 50%;
+}
+
+#section2 #frase-cal{
+	left: 68%;
+	top: 66.6%;
+	transition: all 1100ms ease;
+}
+
+body.fp-viewing-3 #section2 #frase-cal{
+	left: 44.4%;
+}
+
+
+
+
+/*-----------------SECCION 3 - DURABILIDAD*/
+
+#durabilidad {
+	background-image: url(../images/inicio_durabilidad.png);
+	background-size: cover;
+	background-position: center;
+	max-height: 100vh;
+}
+
+.durabilidad .titulo {
+    color: #92312B;
+    text-transform: uppercase;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.durabilidad .frase {
+    color: #92312B;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+
+/*------animacion de section3*/
+
+
+#section3 #img-dura{
+	position: relative;
+	left: 15%;
+	transition: all 1100ms ease;
+}
+
+body.fp-viewing-4 #section3 #img-dura{
+	left: 0%;
+}
+
+#section3 #somos-dura{
+	left: -3%;
+	top: 31%;
+	transition: all 600ms ease;
+}
+
+body.fp-viewing-4 #section3 #somos-dura{
+	left: 7%;
+}
+
+#section3 #titulo-dura{
+    left: -3%;
+    top: 41%;
+	transition: all 1000ms ease;
+}
+
+body.fp-viewing-4 #section3 #titulo-dura{
+    left: 11%;
+}
+
+#section3 #frase-dura{
+    left: 5%;
+    top: 56%;
+	transition: all 1150ms ease;
+}
+
+body.fp-viewing-4 #section3 #frase-dura{
+    left: 20.4%;
+}
+
+
+
+/*-----------------SECCION 4 - INNOVACION*/
+
+#innovacion {
+	background-image: url(../images/inicio_innovacion.png);
+	background-size: cover;
+	background-position: left center;
+	max-height: 100vh;
+}
+
+.innovacion .titulo {
+    color: #41754E;
+    text-transform: uppercase;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.innovacion .frase {
+    color: #41754E;
+    font-size: 40px;
+    font-weight: 300;
+}
+ 
+
+/*------animacion de section4*/
+
+
+#section4 #img-inno{
+	position: relative;
+	left: -17%;
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-5 #section4 #img-inno{
+	left: 0%;
+}
+
+
+#section4 #somos-inno{
+	left: 61%;
+	top: 49%;
+	transition: all 700ms ease 0s;
+
+}
+
+body.fp-viewing-5 #section4 #somos-inno{
+	left: 51%;
+    
+}
+
+#section4 #titulo-inno{
+	left: 57%;
+    top: 60%;
+	transition: all 1200ms ease 0s;
+}
+
+body.fp-viewing-5 #section4 #titulo-inno{
+	 left: 43%;
+     
+}
+
+#section4 #frase-inno{
+    left: 68%;
+    top: 65.4%;
+	transition: all 1250ms ease 0s;
+}
+
+body.fp-viewing-5 #section4 #frase-inno{
+    left: 47.3%;
+}
+
+
+/*-----------------SECCION 5 - SOMOS NOMEN*/
+
+#nomen {
+	background-image: url(../images/inicio_nomen.png);
+	background-size: cover;
+	background-position: center;
+	max-height: 100vh;
+}
+
+.nomen .titulo {
+    color: #767575;
+    height: 7vh;
+}
+ 
+.nomen .boton-conocenos {
+    background-color: #767575 ; 
+    border: none;
+    color: white;
+    text-transform: uppercase;
+   
+    font-weight: 600;
+    letter-spacing: 1px;  
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+   
+    cursor: pointer;
+    border-radius: 2px;
+
+    padding: 8px 10px;
+    /* color: white;  
+    mix-blend-mode: screen; */
+}
+
+.nomen .boton-conocenos:hover {
+    opacity: 0.85; 
+    color: #ededed; 
+}
+
+
+/*------animacion de section4*/
+
+
+#section5 #banco-somos{
+	position: relative;
+	left: 15%;
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-6 #section5 #banco-somos{
+	left: 0%;
+}
+
+
+#section5 #somos-nomen {
+    left: 3%;
+    top: 23%;
+	transition: all 700ms ease;
+}
+
+body.fp-viewing-6 #section5 #somos-nomen{
+	left: 13%;
+}
+
+#section5 #logo-somos{
+	left: 11%;
+    top: 36%;
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-6 #section5 #logo-somos{
+	left: 21%;
+}
+
+#section5 #boton-conocenos{
+	left: 12%;
+    top: 56%;
+	transition: all 900ms ease;
+}
+
+body.fp-viewing-6 #section5 #boton-conocenos{
+	left: 26%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------SECCION  - FOOTER*/
+
+
+.footer{
+	width: 100%;
+}
+
+.footer-inicio .footer {
+    height: 100vh;
+	background-color: #E9E9E9;
+}
+
+.color-medio{
+	background-color: #fafafa;
+	height: 38%;
+}
+
+.footer img{
+	position: absolute;
+	width: 55%;
+	left: 50%;
+	top: 50%;
+	margin-right: -50%;
+    transform: translate(-50%, -50%);
+	transition: all 1200ms ease;
+}
+
+body.fp-viewing-7 .footer img{
+	top: 31%;
+}
+
+.footer .footer-frase{
+	font-size: 42px;
+	position: absolute;
+	font-weight: 300;
+	color: #707070;
+	left: 50%;
+	top: 57%;
+	
+	transform: translate(-50%, -50%);
+	opacity: 0.7;
+	
+    text-decoration: none;
+}
+
+.footer .footer-frase:hover {
+	opacity: 1;
+}
+
+.footer-inicio .footer #mail{
+	color: #707070;
+	opacity: 0.7;
+    font-size: 22px;
+    
+    font-weight: 300;
+	
+	position: absolute;
+	top: 63%;
+	left: 50%;
+	
+    transform: translate(-50%, -50%);
+	
+}
+ 
+.footer-inicio .footer #mail:hover{
+	opacity: 1;
+	text-decoration: none;
+}
+
+
+.redes{
+	position: absolute;
+	
+
+	top: 80%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+	
+	grid-column: 5;
+	grid-row: 2;
+}
+
+.footer #linea-f{
+	position: absolute;
+	top: 95%;
+	width: 55%;
+	
+	left: 50%;
+	margin-right: -50%;
+    transform: translate(-50%, -50%);
+	
+	border-top: 1px solid #D9D9D9;
+    padding-top: 5px;
+    
+    text-align: center
+}
+
+.footer #linea-f p{
+	font-size: 13px;
+    color: #707070;
+	opacity: 0.7;
+
+    font-weight: 300;
+	
+	display: block;
+}
+
+
+.redes a{
+	padding: 20px;
+	
+}
+
+.redes i{
+	font-size: 31px;
+	color: #707070;
+  	opacity: 0.7;
+}
+
+.redes i:hover{
+	  	opacity: 1;
+}
+
+
+@media screen and (min-width: 768px){
+	
+	#menu-mobile{
+	display: none;
+	}
+}
+
+/*para tablets hasta celulares*/
+
+@media (max-width: 1800px) and (min-width:768px){
+	#menu-mobile{
+		/* display: block; */
+		}
+	
+	
+	/*arreglar para tablets grandes horizontales, compus chicas
+	version desktop adaptada*/
+	
+	
+	.inicial{
+		background-position: center right;
+		background-size: 100% auto;
+	}
+	
+	#logoproducto{ 
+		height: 7.5vh !important;
+	}
+
+	#textoProd{
+		font-size: 1.8vh;
+	}
+	
+	.enlacesincio{
+		position: absolute;
+	}
+
+	.container-definiendo {
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 45% auto 12%;
+	}
+
+	
+
+	.container-definiendo .texto-definiendo p {
+		line-height: 1;
+		font-size: 38px;
+	}
+
+	.container-logo {
+		right: 5%;
+		
+	}
+	
+	#fp-nav {
+		
+		top: initial;
+		left: initial;
+	}
+
+	#fp-nav.fp-right {
+		right: 5%;
+		bottom: 8%;
+	}
+
+	.container-definiendo .info-inicio a {
+		font-size: 12px;
+	}
+
+	.container-definiendo .info-inicio a.info-inicio-mail, 
+	.container-definiendo .info-inicio a.info-inicio-tel {
+		padding: 0 0 0 44px;
+	}
+
+	.titulo {
+		font-size: 60px !important;
+	}
+
+	.somos {
+		font-size: 120px !important;
+	}
+
+
+	.boton-productos {
+		top: 68%;
+		font-size: 13px;
+	}
+
+	.nomen .boton-conocenos {
+		font-size: 13px;
+	}
+
+	#section5 #logo-somos{
+		left: 1%;
+	}
+
+	body.fp-viewing-5 #section5 #logo-somos {
+		left: 15%;
+	}
+
+	#section5 #somos-nomen {
+		left: -1%;
+	}
+
+	body.fp-viewing-5 #section5 #somos-nomen {
+		left: 9%;
+	}
+
+	.footer .footer-frase {
+		font-size: 31px;
+	}
+
+	.footer-inicio .footer #mail {
+		font-size: 20px;
+	}
+
+	.redes i {
+		font-size: 25px;
+	}
+
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+    
+	.bar1-close {
+		visibility: visible;
+		-webkit-visibility: visible;
+		-moz-visibility: visible;
+		
+  }
+
+	.bar2-close { 
+		visibility: visible;
+		-webkit-visibility: visible;
+		-moz-visibility: visible;
+	}
+
+	#sidebar0,
+    #sidebar1 {
+		display: none;	
+
+	}
+}
+
+
+
+/*para celulares y mas chico*/	
+
+@media screen and (max-width: 1023px) {
+
+	
+	
+	/*SECCION MENU INICIAL - HAMBURGUESA*/
+	
+	#openmenu{
+		left: 0;
+		width: 50px;
+		top: 0;
+		margin-top: 3.7vh;
+		margin-left: 32px;
+	} 
+
+	.container-logo {
+		right: 3%;
+		top: 3.7vh;
+		padding: 5px;
+	}
+	
+	
+	.container-logo .logo-nomen{
+		height: 24px;
+		width: auto;
+		margin:0 4vw ;
+	}
+	
+	#textoProd{
+		display: none;
+	}
+
+
+	#fp-nav {
+		top: initial;
+		left: initial;
+		right: initial;
+		bottom: initial;
+		margin: 0;
+	}
+
+	#fp-nav.fp-right {
+		right: 5%;
+		bottom: 5%;
+		display: none;
+	}
+	
+	.container-definiendo {
+		grid-template-columns: 9% auto;
+		grid-template-rows: 45% auto 6%;
+	}
+
+	.container-definiendo .info-inicio {
+		position: absolute;
+		left: 8%;
+		bottom: 14%;
+		height: auto;
+		padding: 0 7px;
+		line-height: 3;
+		text-align: left; 
+		display: flex;
+    	flex-direction: column;
+    	justify-content: flex-end;
+	}
+	
+	.container-definiendo .info-inicio a {
+		display: block;
+		padding: 0;
+		font-size: 0.9em;
+	}
+	
+	.container-definiendo .info-inicio a.info-inicio-mail,
+	 .container-definiendo .info-inicio a.info-inicio-tel {
+		padding: 0;
+	}
+
+	.container-definiendo .texto-definiendo {
+		display: none;
+	}
+
+	.container-definiendo .linea {
+		grid-area: linea;
+		border-right: 0;
+	}
+
+/*video*/
+
+	#section0 video {
+		display: none;
+	}
+
+	.section0 .fp-tableCell {
+		height: 100%;
+	}
+
+	#section0 {
+		background-image: url(../images/inicio-celular_04.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+
+	.titulo {
+		font-size: 6vh !important;
+
+	}
+
+	.somos{
+		font-size: 11vh;
+	}
+
+	#diseño {
+		background-image: url(../images/inicio_diseno_resp.png);
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	.acomodador{
+		background-color: khaki;
+	}
+	
+	.diseño .somos {
+		top: 9vh;
+		
+		height: 100%;
+	}
+
+	.texto-inicio #somos-dis {
+		left: -1%;
+	}
+
+	
+	body.fp-viewing-2 #section1 #somos-dis {
+		left: 9%;
+	}
+
+
+	
+	.texto-inicio #titulo-dis {
+		left: 11%;
+	}
+
+	body.fp-viewing-2 #section1 #titulo-dis {
+		left: 25%;
+	}
+
+	.diseño .titulo {
+		top: 16vh;
+	}
+	
+
+	.boton-productos {
+		font-size: 1.8vh;
+		left: 11%;
+		top: 32%;
+	}
+
+	body.fp-viewing-2 #section1 .boton-productos {
+		left: 21%;
+	}
+
+	#calidad {
+		background-image: url(../images/inicio_calidad_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	#section2 #titulo-cal {
+		
+		left: 35%;
+		top: 17%;
+	}
+	
+	body.fp-viewing-3 #section2 #titulo-cal {
+		left: 25%;
+	}
+
+	#section2 #somos-cal {
+		left: 22%;
+		top: 10%;
+	}
+
+	body.fp-viewing-3 #section2 #somos-cal {
+		left: 12%;
+	}
+
+	#durabilidad {
+		background-image: url(../images/inicio_durabilidad_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	#durabilidad .titulo {
+		font-size: 6vh !important;
+	}
+
+	#section3 #titulo-dura {
+		left: -10%;
+		top: 17%;
+	}
+
+	body.fp-viewing-3 #section3 #titulo-dura {
+		left: 4%;
+	}
+
+	#section3 #somos-dura {
+		left: -3%;
+		top: 9%;
+		transition: all 600ms ease;
+	}
+
+	body.fp-viewing-3 #section3 #somos-dura {
+		left: 7%;
+	}
+
+	#innovacion {
+		background-image: url(../images/inicio_innovacion_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+
+	#innovacion .titulo {
+		font-size: 6vh !important;
+	}
+
+	#section4 #titulo-inno {
+		left: 20%;
+		top: 16%;
+	}
+
+	body.fp-viewing-4 #section4 #titulo-inno {
+		left: 6%;
+	}
+
+	#section4 #somos-inno {
+		left: 32%;
+		top: 8%;
+	}
+
+	body.fp-viewing-4 #section4 #somos-inno {
+		left: 22%;
+	}
+
+	#nomen {
+		background-image: url(../images/inicio_nomen_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	.nomen .titulo {
+			color: #767575;
+			height: 5vh !important;
+		}
+
+
+	#section5 #logo-somos {
+		left: -3%;
+		top: 17%;
+		transition: all 1200ms ease;
+	}
+	
+	body.fp-viewing-5 #section5 #logo-somos {
+		left: 11%;
+	}
+
+	#section5 #somos-nomen {
+		left: 11%;
+		top: 7%;
+		transition: all 700ms ease;
+	}
+
+	body.fp-viewing-5 #section5 #somos-nomen {
+		left: 21%;
+	}
+	
+	.nomen .boton-conocenos{
+		font-size: 1.8vh;
+	}
+	
+	#section5 #boton-conocenos {
+		left: 39%;
+		top: 27%;
+		transition: all 900ms ease;
+	}
+	
+	body.fp-viewing-5 #section5 #boton-conocenos {
+		left: 49%;
+	}
+
+	.color-medio {
+		display: none;
+	}
+
+	.footer .footer-frase {
+		font-size: 4.5vh;
+		text-align: center;
+		line-height: 1;
+		top: 35%;
+	}
+
+	.footer-inicio .footer #mail {
+		text-align: center;
+		top: 49%;
+
+	}
+
+	.redes {
+		top: 76%;
+	}
+
+	.redes a {
+		padding: 7px;
+	}
+
+	.redes i {
+		font-size: 3vh;
+	}
+
+	.footer #linea-f {
+		
+		top: 83%;
+	}
+
+	.footer #linea-f p {
+	}
+
+}
+
+
+/*para iPad Pro*/
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+	  
+/*arreglar para tablets grandes horizontales, compus chicas
+	version desktop adaptada*/	
+
+
+	#sidebar0,
+    #sidebar1 {
+        display: none;
+    }
+
+
+	.container-definiendo {
+		grid-template-rows: 45% auto 9%;
+	}
+	
+	.container-definiendo .info-inicio a {
+		font-size: 15px;
+	}
+
+
+
+	.titulo {
+		font-size: 8vh !important;
+
+	}
+
+	.somos{
+		font-size: 14vh !important;
+	}
+
+	
+
+	#diseño {
+		background-image: url(../images/inicio_diseno_resp.png);
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+
+	.diseño .somos {
+		
+		top: 9vh;
+	}
+
+	.texto-inicio #somos-dis {
+		left: -1%;
+		
+	}
+
+	body.fp-viewing-2 #section1 #somos-dis {
+		left: 9%;
+	}
+
+	.texto-inicio #titulo-dis {
+		left: 22%;
+	}
+
+	body.fp-viewing-2 #section1 #titulo-dis {
+		left: 37%;
+	}
+
+	.diseño .titulo {
+		top: 18vh;
+	}
+	
+
+	.boton-productos {
+		font-size: 1.8vh;
+		left: 0%;
+		top: 32%;
+	}
+
+	body.fp-viewing-2 #section1 .boton-productos {
+		left: 15%;
+	}
+
+
+	#calidad {
+		background-image: url(../images/inicio_calidad_resp.png);
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	
+
+	#section2 #titulo-cal {
+		
+		left: 16%;
+		top: 12%;
+		
+	}
+	
+	body.fp-viewing-3 #section2 #titulo-cal {
+		left: 31%;
+	}
+
+	#section2 #somos-cal {
+		left: 2%;
+		top: 10%;
+		
+	}
+
+	body.fp-viewing-3 #section2 #somos-cal {
+		left: 12%;
+	}
+
+
+
+
+
+	#durabilidad {
+		background-image: url(../images/inicio_durabilidad_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	#durabilidad .titulo {
+		font-size: 7vh !important;
+	}
+
+
+	#section3 #titulo-dura {
+		left: 1%;
+		top: 17%;
+		
+	}
+
+	body.fp-viewing-3 #section3 #titulo-dura {
+		left: 16%;
+	}
+
+	#section3 #somos-dura {
+		left: -3%;
+		top: 8%;
+		transition: all 600ms ease;
+	}
+
+	body.fp-viewing-3 #section3 #somos-dura {
+		left: 7%;
+	}
+
+
+
+
+
+
+
+	#innovacion {
+		background-image: url(../images/inicio_innovacion_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+
+	#innovacion .titulo {
+		font-size: 7vh !important;
+	}
+
+	#section4 #titulo-inno {
+		left: 39%;
+		top: 16%;
+	}
+
+	body.fp-viewing-4 #section4 #titulo-inno {
+		left: 24%;
+	}
+
+	#section4 #somos-inno {
+		left: 21%;
+		top: 8%;
+	}
+
+	body.fp-viewing-4 #section4 #somos-inno {
+		left: 11%;
+	}
+
+
+
+
+
+
+
+	#nomen {
+		background-image: url(../images/inicio_nomen_resp.png) !important;
+		background-size: cover;
+		background-position: center;
+		height: 100vh;
+	}
+
+	.nomen .titulo {
+			color: #767575;
+			height: 6vh !important;
+		}
+
+
+	#section5 #logo-somos {
+		left: 7%;
+		top: 21%;
+		transition: all 1200ms ease;
+	}
+	
+	body.fp-viewing-5 #section5 #logo-somos {
+		left: 22%;
+	}
+
+	#section5 #somos-nomen {
+		left: 3%;
+		top: 8%;
+		transition: all 700ms ease;
+	}
+
+
+	body.fp-viewing-5 #section5 #somos-nomen {
+		left: 13%;
+	}
+	
+
+
+	.nomen .boton-conocenos{
+		font-size: 1.8vh;
+	}
+	
+	#section5 #boton-conocenos {
+		left: 32%;
+		top: 30%;
+		transition: all 900ms ease;
+	}
+	
+	body.fp-viewing-5 #section5 #boton-conocenos {
+		left: 57%;
+	}
+
+
+	.footer .footer-frase {
+		font-size: 48px;
+	}
+
+	.footer-inicio .footer #mail {
+		font-size: 29px;
+	}
+
+
+
+
+
+
+
+
+
+
+/*fin media querie tablets*/	
+}
+
+
+
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    color: rgb(0, 0, 0, 0)!important;
+}

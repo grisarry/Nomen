@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiliario urbano - Nomen</title>
+    <meta name="author" content="Nomen Design">
+    <meta name="keywords" content="Nomen, Nomen Design, Diseño Corporativo, Amoblamiento Urbano, Amoblamiento público, Amoblamiento semi-público, Bancos, Cestos, Ceniceros, Bancos para Recepciones, Bancos para Plazas, Bancos para Oficinas, Bancos para salas de espera, Chapas Perforadas, Chapas Decorativas, Separadores de espacio.">
+    <meta name="description" content="Nomen Design: Diseño corporativo, Amoblamiento urbano público y semi-público, Bancos, Cestos, Ceniceros, Fabricante de Chapas Perforadas">
+    <link type="image(png)" href="logos/favicon.ico" rel="icon">
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link type="text/css" href="css/estilos-mobiliario.css" rel="stylesheet">
+    <link type="text/css" href="css/estilos-mobiliario-bancos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos-menu.css">
+    <script src="js/desafio-dom.js"></script>
+    <script>
+        if (!location.href.startsWith("file://")) {
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-668702-5', 'auto');
+            ga('send', 'pageview');
+        }
+    </script>
+</head>
+<header>
+    <div class="fondo-productos imagen-encabezado">
+        <div class="flexmenu">
+            <div id="openmenu" onmouseover="openNav()">
+                <div id="bar1" class="menuh"></div>
+                <div id="bar2" class="menuh"></div>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <a href="../../inicio.html">Inicio</a>
+            <div class="punto"></div>
+            <a href="mobiliario-bancos.html">Productos</a>
+            <div class="punto"></div>
+            <a href="mobiliario-bancos.html">Mobiliario urbano</a>
+            <div class="punto"></div>
+            <a id="pag-selecc" href="#">Bancos</a>
+        </div>
+        <div class="container-logo">
+            <ul class="container-cart">
+                <li id="cartIcon" class="cart">
+                  <i class="large material-icons">shopping_cart</i>
+                  <div id="cartCounter" class="cartCounter">0</div>
+                </li>
+              </ul>
+        </div>
+        <h1 class="titulo-pagina-productos">Mobiliario urbano</h1>
+    </div>
+    <div class="espacio"></div>
+</header>
+
+<body>
+    <!--------  MENU DESPLEGABLE-->
+    <div id="myNav" class="menu-des" onmouseleave="closeNav()">
+        <div id="closemenu" onclick="closeNav()">
+            <div class="bar1-close"></div>
+            <div class="bar2-close"></div>
+        </div>
+        <div class="enlaces-menu">
+            <div id="enlace-00" class="enlacemenu inicio">
+                <a href="../../inicio.html">inicio</a>
+            </div>
+            <div id="enlace-0" class="enlacemenu productos">
+                <a href="mobiliario-bancos.html">Productos</a>
+            </div>
+			
+            <div id="enlace-1" class="enlacemenu proyectos">
+                <a href="#">Proyectos</a>
+ 			 </div>
+			
+            <div class="enlacemenu nosotros">
+                <a href="#">Nosotros</a>
+            </div>
+			
+            <div class="enlacemenu contacto">
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+		
+        <div class="redes-des">
+            <a class="redess" target="_blank"><i id="icons-redes" class="fab fa-twitter"></i></a>
+            <a class="redess" target="_blank"><i id class="fab fa-instagram"></i></a>
+            <a class="redess" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="redess" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+            <a class="redess" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+		
+        <!--codigo menu mobile-->
+        <div id="menu-mobile">
+            <ul class="enlaces-mobile">
+                <li><a href="../../inicio.html">INICIO</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">PROYECTOS</a></li>
+                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--cierre menu desplegable-->
+
+    <div id="productsOnCart" class="productsOnCart d-flex justify-content-start align-items-center p-5"></div>
+    <div class="grid-container">
+        <!--------------------------------------------------MENU NAV-->
+        <div id="menu2-fixed" class="item2">
+            <a id="mobi" class="titlista" href="../" >MOBILIARIO URBANO</a>
+            <ul class="menu-mob">
+                <li id="pag-seleccionada" class="link-mob"><a class="bancos" href="../mobiliario-bancos/mobiliario-bancos.html">Bancos</a></li>
+                <li class="link-mob"><a class="cestos" href="../mobiliario-cestos/mobiliario-cestos.html">Cestos</a></li>
+                <li class="link-mob"><a class="mesas" href="../mobiliario-mesas/mobiliario-mesas.html">Mesas</a></li>
+                <li class="link-mob"><a class="sist" href="../mobiliario-bicicleteros/mobiliario-bicicleteros.html">Bicicleteros</a></li>
+                <li class="link-mob"><a class="parklets" href="../mobiliario-maceteros/mobiliario-maceteros.html">Maceteros</a></li>
+                <li class="link-mob"><a class="parklets" href="../mobiliario-ceniceros/mobiliario-ceniceros.html">Ceniceros</a></li>
+            </ul>
+            <a class="titlista2" href="../../accesorios-urbanos/">Accesorios urbanos</a>
+			<a class="titlista2" href="#">Soluciones especiales</a>
+            <a class="titlista2" href="#">Chapas perforadas</a>
+            <a class="titlista2" href="#">Fachadas y revestimientos</a>
+            <a class="titlista2" href="#">Próximos lanzamientos</a>
+            <!--	  
+		   <ul class="filtrarpor">FILTRAR POR
+			   <li class="filtros" id="primerfiltro">
+				   
+				   <i class="material-icons" id="flecha1">keyboard_arrow_right</i>
+				   <p class="btnfiltros">AMBIENTES</p>
+		   	   </li>
+			   
+					 <ul id="f-ambientes">
+							 <li>
+								<label class="container">INTERIOR
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">EXTERIOR
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">SALA DE ESPERA
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+						 </ul>
+		   
+		   <li class="filtros" id="segundofiltro">
+			   <i class="material-icons" id="flecha2">keyboard_arrow_right</i>
+			   <p class="btnfiltros">COMPONENTES</p>
+			</li>
+			   
+			   <ul id="f-componentes">
+							 <li>
+								<label class="container">CON RESPALDO
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">SIN RESPALDO
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">APOYABRAZOS
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+			   
+			  				 <li>
+								<label class="container">PUERTO USB
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+						 </ul>
+			   
+		   
+		   <li class="filtros" id="tercerfiltro">
+			   <i class="material-icons" id="flecha3">keyboard_arrow_right</i>
+			   <p class="btnfiltros">MATERIALES</p>
+			</li>
+			   
+			   <ul id="f-materiales">
+							 <li>
+								<label class="container">MADERA
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">CHAPA PERFORADA
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">HORMIGÓN
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+						 </ul>
+			   
+		   <li class="filtros" id="cuartofiltro">
+			   <i class="material-icons" id="flecha4">keyboard_arrow_right</i>
+			   <p class="btnfiltros">PLAZAS</p>
+			</li>
+			   
+			   <ul id="f-plazas">
+							 <li>
+								<label class="container">1 PLAZA
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">2 PLAZAS
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+							 <li>
+								<label class="container">3 PLAZAS
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+
+			   
+			  				 <li>
+								<label class="container">4 Y MÁS PLAZAS
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							 </li>
+						 </ul>
+	  </ul>-->
+        </div>
+        <div class="dropdown show">
+            <a id="dropdownMenuLink" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true">Bancos</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item productos-mobile" href="../">Mobiliario urbano</a>
+                <a class="dropdown-item" href="../mobiliario-sala-espera/">Bancos para sala de espera</a>
+                <a class="dropdown-item" href="../mobiliario-cestos/mobiliario-cestos.html">Cestos</a>
+                <a class="dropdown-item" href="../mobiliario-mesas/mobiliario-mesas.html">Mesas</a>
+                <a class="dropdown-item" href="../mobiliario-bicicleteros/mobiliario-bicicleteros.html">Bicicleteros</a>
+                <a class="dropdown-item" href="../mobiliario-maceteros/mobiliario-maceteros.html">Maceteros</a>
+                <a class="dropdown-item" href="../mobiliario-ceniceros/mobiliario-ceniceros.html">Ceniceros</a>
+                <a class="dropdown-item productos-mobile" href="../../accesorios-urbanos/">Accesorios urbanos</a>
+                <a class="dropdown-item productos-mobile" href="../../soluciones-especiales/soluciones-informacion/soluciones-informacion.html">Soluciones especiales</a>
+				<a class="dropdown-item productos-mobile" href="../../chapas-perforadas/chapas-informacion/chapas-informacion.html">Chapas perforadas</a>
+                <a class="dropdown-item productos-mobile" href="../../fachadas-revestimientos/fachadas-informacion/">Fachadas y revestimientos</a>
+                <a class="dropdown-item productos-mobile" href="../../proximos-lanzamientos/proximos-lanzamientos.html">Proximos lanzamientos</a>
+            </div>
+        </div>
+        <!--GRILLA PRODUCTOS-->
+        <div class="item3">
+            <!--menu navegacion interna-->
+            <div class="contenedorgrilla">
+                <div class="item-3">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-flug/mobiliario-banco-flug.html">
+                        <div class="img-3"></div>
+                    </a>
+                    <a class="enlacesgrilla" href="mobiliario-bancos-flug/mobiliario-banco-flug.html">Flug</a>
+                </div>
+                <div class="item-1">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-anglo/mobiliario-banco-anglo.html">
+                        <div class="img-1"></div>
+                    </a>
+                    <a href="mobiliario-bancos-anglo/mobiliario-banco-anglo.html">Anglo</a>
+                </div>
+                <div class="item-26">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-uniflug/mobiliario-banco-uniflug.html">
+                        <div class="img-26"></div>
+                    </a>
+                    <a href="mobiliario-bancos-uniflug/mobiliario-banco-uniflug.html">Uniflug</a>
+                </div>
+                <div class="item-5">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-arco/mobiliario-banco-arco.html">
+                        <div class="img-5"></div>
+                    </a>
+                    <a href="mobiliario-bancos-arco/mobiliario-banco-arco.html">Arco</a>
+                </div>
+                
+                <div class="item-11">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-logan/mobiliario-banco-logan.html">
+                        <div class="img-11"></div>
+                    </a>
+                    <a href="mobiliario-bancos-logan/mobiliario-banco-logan.html">Logan</a>
+                </div>
+                <div class="item-2">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-moe/mobiliario-banco-moe.html">
+                        <div class="img-2"></div>
+                    </a>
+                    <a href="mobiliario-bancos-moe/mobiliario-banco-moe.html">Moe</a>
+                </div>
+                <div class="item-6">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-luka/mobiliario-banco-luka.html">
+                        <div class="img-6"></div>
+                    </a>
+                    <a href="mobiliario-bancos-luka/mobiliario-banco-luka.html">Luka</a>
+                </div>
+                <div class="item-4">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-dotsh/mobiliario-banco-dotsh.html">
+                        <div class="img-4"></div>
+                    </a>
+                    <a href="mobiliario-bancos-dotsh/mobiliario-banco-dotsh.html">Dotsh</a>
+                </div>
+                <div class="item-8">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-galo/mobiliario-banco-galo.html">
+                        <div class="img-8"></div>
+                    </a>
+                    <a href="mobiliario-bancos-galo/mobiliario-banco-galo.html">Galo</a>
+                </div>
+                <div class="item-27">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-dong/mobiliario-banco-dong.html">
+                        <div class="img-27"></div>
+                    </a>
+                    <a href="mobiliario-bancos-dong/mobiliario-banco-dong.html">Dong</a>
+                </div>
+                <div class="item-7">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-peble/mobiliario-banco-peble.html">
+                        <div class="img-7"></div>
+                    </a>
+                    <a href="mobiliario-bancos-peble/mobiliario-banco-peble.html">Peble</a>
+                </div>
+                <div class="item-16">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-quad/mobiliario-banco-quad.html">
+                        <div class="img-16"></div>
+                    </a>
+                    <a href="mobiliario-bancos-quad/mobiliario-banco-quad.html">Quad</a>
+                </div>
+                <div class="item-12">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-dn/mobiliario-banco-dn.html">
+                        <div class="img-12"></div>
+                    </a>
+                    <a href="mobiliario-bancos-dn/mobiliario-banco-dn.html">D+N</a>
+                </div>
+                <div class="item-13">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-laminar/mobiliario-banco-laminar.html">
+                        <div class="img-13"></div>
+                    </a>
+                    <a href="mobiliario-bancos-laminar/mobiliario-banco-laminar.html">Laminar</a>
+                </div>
+                <div class="item-18">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-alas/mobiliario-banco-alas.html">
+                        <div class="img-18"></div>
+                    </a>
+                    <a href="mobiliario-bancos-alas/mobiliario-banco-alas.html">Alas</a>
+                </div>
+                <div class="item-23">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-retro/mobiliario-banco-retro.html">
+                        <div class="img-23"></div>
+                    </a>
+                    <a href="mobiliario-bancos-retro/mobiliario-banco-retro.html">Retro</a>
+                </div>
+                <div class="item-9">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-mold/mobiliario-banco-mold.html">
+                        <div class="img-9"></div>
+                    </a>
+                    <a href="mobiliario-bancos-mold/mobiliario-banco-mold.html">Mold</a>
+                </div>
+                
+                <div class="item-15">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-lazo/mobiliario-banco-lazo.html">
+                        <div class="img-15"></div>
+                    </a>
+                    <a href="mobiliario-bancos-lazo/mobiliario-banco-lazo.html">Lazo</a>
+                </div>
+                <div class="item-14">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-frame/mobiliario-banco-frame.html">
+                        <div class="img-14"></div>
+                    </a>
+                    <a href="mobiliario-bancos-frame/mobiliario-banco-frame.html">Frame</a>
+                </div>
+                <div class="item-17">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-front/mobiliario-banco-front.html">
+                        <div class="img-17"></div>
+                    </a>
+                    <a href="mobiliario-bancos-front/mobiliario-banco-front.html">Front</a>
+                </div>
+                <div class="item-19">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-floyd/mobiliario-banco-floyd.html">
+                        <div class="img-19"></div>
+                    </a>
+                    <a href="mobiliario-bancos-floyd/mobiliario-banco-floyd.html">Floyd</a>
+                </div>
+                <div class="item-25">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-kinder/mobiliario-banco-kinder.html">
+                        <div class="img-25"></div>
+                    </a>
+                    <a href="mobiliario-bancos-kinder/mobiliario-banco-kinder.html">Kinder</a>
+                </div>
+                <div class="item-20">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-emoti/mobiliario-banco-emoti.html">
+                        <div class="img-20"></div>
+                    </a>
+                    <a href="mobiliario-bancos-emoti/mobiliario-banco-emoti.html">Emoti</a>
+                </div>
+                <div class="item-21">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-petalo/mobiliario-banco-petalo.html">
+                        <div class="img-21"></div>
+                    </a>
+                    <a href="mobiliario-bancos-petalo/mobiliario-banco-petalo.html">Pétalo</a>
+                </div>
+                <div class="item-22">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-tetris/mobiliario-banco-tetris.html">
+                        <div class="img-22"></div>
+                    </a>
+                    <a href="mobiliario-bancos-tetris/mobiliario-banco-tetris.html">Tetris</a>
+                </div>
+                <div class="item-24">
+                    <a class="enlacesgrilla" href="mobiliario-bancos-woo/mobiliario-banco-woo.html">
+                        <div class="img-24"></div>
+                    </a>
+                    <a href="mobiliario-bancos-woo/mobiliario-banco-woo.html">Woo</a>
+                </div>
+            </div>
+        </div>
+        <!------- FOOTER-->
+        <div id="futer" class="footer">
+            <div class="logof">
+                <a class="logfooter" href="../../inicio.html">
+                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 31.28">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #707070;
+                  opacity: 0.7;
+                }
+
+              </style>
+            </defs>
+            <title>LogoPagProducto</title>
+            <path class="cls-1"
+              d="M19.72,15.4h-.25A10.22,10.22,0,0,1,9.54,5.24V4.86H0v.38a19.79,19.79,0,0,0,6.87,15A19.8,19.8,0,0,0,0,35.22v.09H9.53v-.09a10.18,10.18,0,0,1,9.93-10.17h.46A10.22,10.22,0,0,1,30,35.22v.09h9.59v-.09A19.81,19.81,0,0,0,19.72,15.4Z"
+              transform="translate(0.05 -4.86)"></path>
+            <path class="cls-1"
+              d="M47.58,15.88H55v2.8h.07c1.54-1.91,4.35-3.31,8.19-3.31,4.78,0,8.27,2.3,8.27,7.15V35.35H63.9V24.82c0-2.48-1.4-3.7-3.95-3.7-2.7,0-4.75,1.47-4.75,4.67v9.56H47.58Z"
+              transform="translate(0.05 -4.86)"></path>
+            <path class="cls-1"
+              d="M88.15,15.08c8.81,0,13.66,3.63,13.66,10.53S97,36.14,88.15,36.14,74.5,32.51,74.5,25.61,79.35,15.08,88.15,15.08Zm-5.6,10.53c0,3.67,2.16,5.5,5.6,5.5s5.61-1.83,5.61-5.5-2.15-5.49-5.61-5.49S82.55,22,82.55,25.61Z"
+              transform="translate(0.05 -4.86)"></path>
+            <path class="cls-1"
+              d="M104.79,15.88h7.41v2.83h.07a10.52,10.52,0,0,1,7.83-3.34c2.7,0,5.17.72,6.9,3.34a10.64,10.64,0,0,1,8.19-3.34c4.07,0,7.55,1.76,7.55,6.61V35.35h-7.62V24c0-1.87-1.22-2.88-3.27-2.88-2.8,0-4.28,1.37-4.28,3.34V35.35H120V24c0-1.87-1.22-2.88-3.27-2.88-2.81,0-4.28,1.37-4.28,3.34V35.35h-7.62Z"
+              transform="translate(0.05 -4.86)"></path>
+            <path class="cls-1"
+              d="M172.5,29.57c-.94,3.23-4.64,6.57-12.94,6.57-8.77,0-13.66-3.34-13.66-10.56,0-6.9,5.36-10.5,13.44-10.5,8.34,0,13.51,3.63,13.51,11.76v.57H153.74c.39,2.52,2.19,4.35,6.11,4.35a5.33,5.33,0,0,0,4.6-2.19ZM165,23.46c-.43-2.16-2.05-4-5.64-4s-5.21,1.83-5.64,4Z"
+              transform="translate(0.05 -4.86)"></path>
+            <path class="cls-1"
+              d="M176,15.88h7.41v2.8h.07c1.54-1.91,4.35-3.31,8.19-3.31,4.78,0,8.27,2.3,8.27,7.15V35.35h-7.62V24.82c0-2.48-1.4-3.7-4-3.7s-4.74,1.47-4.74,4.67v9.56H176Z"
+              transform="translate(0.05 -4.86)"></path>
+          </svg>
+                </a>
+            </div>
+            <div class="menuf">
+                <ul class="listproductfoot">
+                    <li><a id="afooter" href="#">PRODUCTOS</a></li>
+                    <li><a href="#">Mobiliario urbano</a></li>
+                    <li><a href="#">Accesorios urbanos</a></li>
+                    <li><a href="#">Soluciones especiales</a></li>
+                    <li><a href="#">Chapas perforadas</a></li>
+					<li><a href="#">Fachadas y revestimientos</a></li>
+                    <li><a href="#">Próximos lanzamientos</a></li>
+                </ul>
+            </div>
+            <div class="menuc">
+                <ul class="listcontacto">
+                    <li><a id="afooter2" href="../../contacto/">CONTACTO</a></li>
+                    <li><a href="tel:+54 11 4721-3750">+54 11 4721-3750</a></li>
+                    <li>
+                        <p>Munro, Buenos Aires, Argentina</p>
+                    </li>
+                    <li>
+                        <p>Eduardo Sívori 5168 (B1605AVJ)</p>
+                    </li>
+                    <li>
+                        <p>9.00 a 18.00hs</p>
+                    </li>
+                    <li><a href="mailto:contacto@nomen.com.ar">contacto@nomen.com.ar</a></li>
+                </ul>
+            </div>
+            <div class="redes">
+                <a href="https://twitter.com/nomendesign" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/nomendesign/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/NomenDesign" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://ar.pinterest.com/nomendesign/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.linkedin.com/company/nomen-design/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="pais">
+                <div class="menubandera">
+                    <div class="banderita">
+                        <img src="../../logos/ar.svg" alt>
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="http://www.nomen.com.br/"><img src="../../logos/br.svg" alt="Brasil"></a>
+                        <a href="http://www.nomen.com.mx/"><img src="../../logos/mx.svg" alt="México"></a>
+                        <a href="http://www.nomendesign.com/ncr"><img src="../../logos/us.svg" alt="Estados Unidos"></a>
+                        <a href="http://www.nomen.com.uy/"><img src="../../logos/uy.svg" alt="Uruguay"></a>
+                        <a href="http://www.nomen.cl/"><img src="../../logos/cl.svg" alt="Chile"></a>
+                        <a href="http://www.nomen.com.py/"><img src="../../logos/py.svg" alt="Paraguay"></a>
+                        <a href="http://www.nomen.com.pe/"><img src="../../logos/pe.svg" alt="Perú"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="legales">
+                <p>© 2020 NOMEN DESIGN</p>
+                <div class="alegales">
+                    <!-- <a href="" class="terminos">Términos y condiciones</a> -->
+                    <a class="politicas" href="../../privacidad/">Política de privacidad</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Abrir y cerrar Menu-->
+    <script type="text/javascript">
+        function openNav() {
+            document.getElementById("myNav").style.left = "0px";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.left = "-100vw";
+
+        }
+    </script>
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("menu2-fixed");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        var repeater;
+
+        function openMenu() {
+            document.getElementById("menu-product").style.left = "500px";
+        }
+
+        function closeMenu() {
+            document.getElementById("menu-product").style.left = "-500px";
+        }
+    </script>
+    <script>
+        $('.collapse').collapse()
+    </script>
+    <!--Scripts enlazados-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.js"></script>
+    <script src="../../js/flechas-filtros.js"></script>
+    <script src="../../js/MenuColorChange.js"></script>
+    <script src="../../js/breadcrums-header.js"></script>
+    <script src="../../js/prefixfree.min.js"></script>
+</body>
+
+</html>
