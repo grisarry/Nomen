@@ -850,14 +850,59 @@ a{
 
 
 
+/* CART */
 
+.sideNavCart{
+	position: fixed;
+	justify-content: left;
+	z-index: 150;
+	width: 40%;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	background-color: white;
+	box-shadow: -3px -3px 2px 1px rgba(0, 0, 0, 0.2);
+	display: none;
+}
 
+.TitleCarrito{
+	font-size: 25px;
+	color: #4B4B4B;
+	font-weight: 500;
+	text-align: center;
+	margin: 8% 5%;
+}
 
+.productInCart{
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #D9D9D9;
+	height: 15vh;
+	width: 100%;
+	padding: 0% 5%;
+}
 
+.imgCarrito{
+	position: relative;
+	height: 100%;
+	margin-right: 30%;
+}
 
+.precioCarrito{
+    font-size: 20px;
+    font-weight: 600;
+	color: #506e95;
+	align-self: center;
+}
 
+.contadorCarrito{
+	font-size: 16px;
+	width: 30px;
+	height: 30%;
+	align-self: center;
+	margin-left: 15%;
 
-
+}
 
 
 
