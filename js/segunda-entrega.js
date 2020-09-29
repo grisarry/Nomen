@@ -1,4 +1,5 @@
 
+ // database
 class Product {
     constructor(name, price, imgPath) {
       this.name = name;
@@ -9,8 +10,13 @@ class Product {
     }
   }
   
-  var products;
 
+  // APP
+
+  var products;
+  var productsMap = new Map();
+
+     //   Parseo el string
   window.onload = () => {
     let objectFromJSON = JSON.parse(dbJSON);
     products = objectFromJSON.map((object) => {
@@ -19,7 +25,12 @@ class Product {
    
     products.forEach((product) => {
       document.getElementById("contenedorCards").appendChild(createCard(product))
+    
+      // Cargo los productos en el mapa
+      productsMap.set(product, 0);
     });
+
+
   };
 
 
@@ -42,9 +53,9 @@ function createCard(product) {
   let button = createComponent("button", "addToCart");
   button.innerHTML = `Agregar al carrito`;
 
-  // Creo el Listener en el boton y
+  // Listener en el boton 
   button.addEventListener("click", () => {
-    addToCartPlus(product);
+    addProductToCart(product);
   });
 
   // Agrego todos los items a la carta
@@ -58,13 +69,53 @@ function createCard(product) {
   return container;
 }
 
-// Funcion al clickear el boton
-function addToCartPlus(product) {
-  let counter = document.getElementById("cartCounter");
-  let currentValue = counter.innerHTML;
-  counter.innerHTML = parseInt(currentValue) + 1;
+
+
+
+// !! Agregar productos al carrito
+function addProductToCart(product) {
+  let counterElement = document.getElementById("cartCounter");
+  let counter = 0;
+  
+  const productsOnCart = document.getElementById("cardsCarrito");
+
+  // Agrego adentro del map una unidad al producto que se selecciono 
+  productsMap.set(product, productsMap.get(product) + 1)
+
+  productsOnCart.innerHTML = '';
+
+  products.forEach(product => {
+    let amountOfProducts = productsMap.get(product);
+
+    if ( amountOfProducts > 0) {
+      let productCard = document.createElement('div');
+      productCard.innerHTML = 
+            `<div class="productCarrito row">
+              <div class="containerNombre col-6">
+                  <img class="productCarritoImg " src="${product.imgPath}"></img>
+                  <div class="productCarritoTitle ">${product.name}</div>
+              </div>
+              <div class="productCarritoPrice col-4">$${product.price}</div>
+              <div class="row">
+                    <button class="eliminarItem" onclick="eliminarCart(event)"> - </button>
+                    <div id="carritoCounter" class="carritoCounter">${amountOfProducts}</div>
+                    <button class="agregarItem" onclick="agregarCart(event)"> + </button>
+                  </div>
+            </div>`;
+      
+            counter += productsMap.get(product);
+
+            // Agrego el producto a la vista del carrito
+            productsOnCart.appendChild(productCard);
+    }
+          counterElement.innerHTML = counter;
+          
+  })
 
 }
+
+
+
 
 // !!!!!!! O.o
 function createComponent(tag, classes) {
@@ -75,33 +126,27 @@ function createComponent(tag, classes) {
 
 
 
-// 
-
-{/* <div class="productInCart">
-  <img class="imgCarrito" src="imagenes-mobiliario-bancos/banco_anglo_01.jpg" alt="">
-  <p class="precioCarrito">$1500</p>
-</div> */}
 
 
 
-function createCardInCart(product) {
-  let carrito = createComponent("div", "productInCart");
+// function createCardInCart(product) {
+//   let carrito = createComponent("div", "productInCart");
 
-  carrito.innerHTML = `<img class="imgCarrito" src="${product.imgPath}">
-  <p class="precioCarrito">$${product.price}</p>
-  <p class="contadorCarrito">0</p>`;
-  return carrito;
-}
-
-
-// boton dentro de card
-
-  button.addEventListener("click", () => {
-    addToCartPlus(product);
-  });
+//   carrito.innerHTML = `<img class="imgCarrito" src="${product.imgPath}">
+//   <p class="precioCarrito">$${product.price}</p>
+//   <p class="contadorCarrito">0</p>`;
+//   return carrito;
+// }
 
 
 
+  // Menu
+  function openNav() {
+      document.getElementById("myNav").style.left = "0px";
+  }
+  function closeNav() {
+      document.getElementById("myNav").style.left = "-100vw";
+  }
 
 
 
