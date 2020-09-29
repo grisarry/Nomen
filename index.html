@@ -17,12 +17,8 @@
     
     <script  src="js/database-bancos.js"></script> 
     <script  src="js/segunda-entrega.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
     <script  src="js/eventsjquery.js"></script>
-
 
 </head>
 <header>
@@ -75,7 +71,7 @@
  			 </div>
 			
             <div class="enlacemenu nosotros">
-                <a href="#">Nosotros</a>
+                <a href="nosotros/nosotros.html">Nosotros</a>
             </div>
 			
             <div class="enlacemenu contacto">
@@ -97,14 +93,12 @@
                 <li><a href="../../inicio.html">INICIO</a></li>
                 <li><a href="#">PRODUCTOS</a></li>
                 <li><a href="#">PROYECTOS</a></li>
-                <li><a href="#">NOSOTROS</a></li>
+                <li><a href="nosotros/nosotros.html">NOSOTROS</a></li>
                 <li><a href="#">CONTACTO</a></li>
             </ul>
         </div>
-    </div>
-    <!--cierre menu desplegable-->
+    </div><!--cierre menu desplegable-->
 
-    <div id="productsOnCart" class="productsOnCart d-flex justify-content-start align-items-center p-5"></div>
     <div class="grid-container">
         <!--------------------------------------------------MENU NAV-->
         <div id="menu2-fixed" class="item2">
@@ -279,8 +273,6 @@
                 </div>
             </div>
         </div>
-
-
         <!------- FOOTER-->
         <div id="futer" class="footer">
             <div class="logof">
@@ -377,37 +369,30 @@
             </div>
         </div>
 
+    </div> <!----Cierre de grid-->
 
-        <div class="sideNavCart">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <p class="TitleCarrito">Productos en el carrito</p>
+
+
+    <!------- CARRITO DE COMPRAS-->
+
+    <div class="cartMask"></div>
+    <div class="sideNavCart">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <p class="TitleCarrito">Productos en el carrito</p>
+        <div class="textosCarrito row"">
+            <p class="col-5">PRODUCTOS</p>
+            <p class="col">PRECIO</p>
+            <p class="col">CANTIDAD</p>
         </div>
-
-
-
-
+        <div id="cardsCarrito" class=""></div>
     </div>
 
-
-    <!--Abrir y cerrar Menu-->
-    <script type="text/javascript">
-        function openNav() {
-            document.getElementById("myNav").style.left = "0px";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.left = "-100vw";
-
-        }
-    </script>
     <script>
-        window.onscroll = function() {
+          window.onscroll = function() {
             myFunction()
         };
-
         var header = document.getElementById("menu2-fixed");
         var sticky = header.offsetTop;
-
         function myFunction() {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
@@ -416,17 +401,8 @@
             }
         }
     </script>
-    <script type="text/javascript">
-        var repeater;
 
-        function openMenu() {
-            document.getElementById("menu-product").style.left = "500px";
-        }
 
-        function closeMenu() {
-            document.getElementById("menu-product").style.left = "-500px";
-        }
-    </script>
     <!--Scripts enlazados-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
