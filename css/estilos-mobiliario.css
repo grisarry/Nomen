@@ -198,12 +198,6 @@ a{
     background-color: #707070;
 }
 
-.productCard {
-    position: relative;
-    margin-bottom: 100px;
-    background-color: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
 
 .productsOnCart {
     position: fixed;
@@ -488,6 +482,7 @@ a{
 
 /*.............................................ITEM 3 - GRILLA*/
 
+/*
 .item3 a{
 	text-decoration: none;
 }
@@ -504,7 +499,7 @@ a{
 }
 
 /*...........................GRILLA*/
-
+/*
 .contenedorgrilla{
 	margin-top: 50px;
 	display: grid;
@@ -525,7 +520,84 @@ a{
 	height: 300px;
 }
 
+.button-prod{
+	margin-top: 2%;
+	background-color: #707070;
+	color: white;
+	border: none;
+	border-radius: 5%;
+	padding: 0.5% 4%;
+	font-weight: 500;
+}
 
+.button-prod:hover{
+	background-color: #969696;
+}
+ */
+
+
+ 
+/* TARJETA CARD */
+
+ .productCard {
+    position: relative;
+	margin-bottom: 50px;
+	justify-content: center;
+	justify-items: center;
+	background-color: white;
+	padding: 10% 0;
+}
+
+.productCardImg {
+    width: 100%;
+	display: flex;
+	position: relative;
+}
+
+.productCardImg2{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.productCardTitle {
+	display: block;
+    padding: 2px 0;
+	font-size: 18px;
+	font-weight: 400;
+	justify-content: center;
+	text-align-last: center;
+	text-decoration: none;
+	color: #707070;
+}
+
+.productCardPrice {
+    padding: 5px 0;
+    font-size: 22px;
+    font-weight: 600;
+	text-align-last: center;
+	color: #506e95;
+}
+
+.productCard button {
+    display: flex;
+	padding: 1.2% 12%;
+	margin: auto;
+    background-color: #707070;
+	outline: none;
+	color: #FAFAFA;
+	font-weight: 400;
+	box-shadow: none;
+	border-width: 0px;
+	border-style: none;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.productCard button:hover {
+	background-color: #666666;
+	cursor: pointer;
+}
 
 
 
@@ -748,7 +820,7 @@ a{
 .grid-container .legales a{
 		font-weight: 200;
 }
-
+#
 .grid-container .legales p{
 		font-weight: 200;
 }
@@ -774,13 +846,151 @@ a{
  
 
 
+/* CART */
 
+.cartMask{
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #666666;
+	opacity: 30%;
+	right: -100%;
+}
 
+.sideNavCart{
+	position: fixed;
+	justify-content: left;
+	z-index: 150;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	background-color: white;
+	box-shadow: -4px -4px 4px 1px rgba(0, 0, 0, 0.15);
+	width: 40%;
+	right: -100%;
+	transition: all .15s ease-in-out;
+	overflow-y: auto;
 
+}
 
+.sideNavCart .closebtn {
+	position: absolute;
+	top: 0;
+	left: 25px;
+	font-size: 42px;
+	font-weight: 400;
+	margin-right: 50px;
+	color: #707070;
+  }
 
+  .openCart{
+	right: 0%;
+  }
 
+.TitleCarrito{
+	font-size: 22px;
+	text-transform: uppercase;
+	color: #707070;
+	font-weight: 500;
+	text-align: center;
+	margin: 4% 4%;
+	padding-top: 8%;
+	display: block;
+}
 
+.textosCarrito{
+	background-color: #E9E9E9;
+	padding-top: 2%;
+}
+
+.textosCarrito p{
+	font-size: 12px;
+	color: #707070;
+	font-weight: 500;
+	text-align: center;
+}
+
+.imgCarrito{
+	position: relative;
+	height: 100%;
+}
+
+.precioCarrito{
+    font-size: 20px;
+    font-weight: 600;
+	color: #506e95;
+	align-self: center;
+}
+
+.contadorCarrito{
+	font-size: 16px;
+	width: 30px;
+}
+
+.productCarrito{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 2% 5%;
+	align-self: center;
+}
+
+.productCarrito img{
+	height: 10vh;
+	margin-right: 5%;
+}
+
+.containerNombre{
+	display: flex;
+	flex-direction: row;
+}
+
+.productCarritoTitle{
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #707070;
+	font-weight: 600;
+	align-self: center;
+} 
+
+.productCarritoPrice{
+	color: #506e95;
+	font-weight: 500;
+	font-size: 15px;
+	align-self: center;
+}
+
+.productCarrito button{
+	border: none;
+    margin: 5px;
+	padding: 4px 14px;
+    width: auto;
+    overflow: visible;
+	color: #707070;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 4px;
+}
+
+.carritoCounter{
+	font-size: 20;
+	font-weight: 600;
+	color: #707070;
+	padding: 0 8px;
+	align-self: center;
+	
+}
+
+.productCarrito button:hover,
+.productCarrito button:focus {
+	outline: 1px solid #fff;
+}
+
+.productCarrito button:active {
+	transform: scale(0.85);
+	background-color: #D9D9D9;
+}
 
 
 
@@ -811,8 +1021,6 @@ a{
 	}
 	
 }
-
-
 
 
 /*para celulares y mas chico*/	
@@ -1233,7 +1441,9 @@ a{
 
 		
 	/*item 3 - enlacesssss*/
-		
+	
+	
+	/*
 	.container-enlaces{
 	padding-left: 3%;
 }
